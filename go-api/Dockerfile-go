@@ -1,0 +1,25 @@
+# Dockerfile-go
+
+# Use the official Go image as the base image
+FROM golang:1.18-alpine
+
+# Set the Current Working Directory inside the container
+WORKDIR /app
+
+# Copy go.mod and go.sum
+COPY go.mod go.sum ./
+
+# Download Go modules
+RUN go mod download
+
+# Copy the rest of the application code
+COPY . .
+
+# Build the Go app
+RUN go build -o go-api .
+
+# Expose port 8080 to the outside world
+EXPOSE 8080
+
+# Command to run the executable
+CMD ["./go-api"]
