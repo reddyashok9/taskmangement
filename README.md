@@ -1,6 +1,7 @@
 # taskmangement
 Task Managemnt
 
+Run Dockercompose up redis instance
 
 Running the Application
 Go API:
