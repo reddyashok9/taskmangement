@@ -96,7 +96,7 @@ const TaskManagement = () => {
             <Box my={2}>
                 <Typography variant="h6">All Tasks (Go API)</Typography>
                 <List>
-                    {tasks.map((task) => (
+                    {tasks?.map((task) => (
                         <ListItem key={task._id}>
                             <ListItemText primary={task.title} secondary={task.description} />
                         </ListItem>

@@ -6,7 +6,7 @@ import (
 
 type Task struct {
 	ID          primitive.ObjectID `bson:"_id,omitempty" json:"id,omitempty"`
-	Name        string             `json:"name"`
+	Title       string             `json:"title"`
 	Description string             `json:"description"`
 	Status      string             `json:"status"`
 }
